@@ -1,0 +1,25 @@
+--Create a music store database
+
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, album_name TEXT, artist TEXT, year_released INTEGER, form TEXT, quantity INTEGER, price INTEGER); 
+
+INSERT INTO inventory VALUES (1, "Midnights", "Taylor Swift", 2022, "CD", 200, 14);
+INSERT INTO inventory VALUES (2, "RENAISSANCE", "Beyonce", 2022, "CD", 95, 14);
+INSERT INTO inventory VALUES (3, "CRASH", "Charli XCX", 2022, "Vinyl", 50, 22);
+INSERT INTO inventory VALUES (4, "Special", "Lizzo", 2022, "CD", 65, 14);
+INSERT INTO inventory VALUES (5, "Traumazine", "Megan Thee Stallion", 2022, "CD", 72, 14);
+INSERT INTO inventory VALUES (6, "CHARLIE", "Charlie Puth", 2022, "CD", 30, 14);
+INSERT INTO inventory VALUES (7, "Positions", "Ariana Grande", 2021, "Vinyl", 15, 28);
+INSERT INTO inventory VALUES (8, "Future Nostalgia", "Dua Lipa", 2020, "Vinyl", 12, 58);
+INSERT INTO inventory VALUES (9, "Golden Hour", "Kacey Musgraves", 2018, "Vinyl", 10, 20);
+INSERT INTO inventory VALUES (10, "Slut Pop", "Kim Petras", 2022, "CD", 5, 14);
+INSERT INTO inventory VALUES (11, "Jagged Little Pill", "Alanis Morissette", 1995, "Vinyl", 26, 25);
+INSERT INTO inventory VALUES (12, "thank u, next", "Ariana Grande", 2019, "CD", 18, 14);
+INSERT INTO inventory VALUES (13, "Dua Lipa", "Dua Lipa", 2017, "Vinyl", 9, 33);
+INSERT INTO inventory VALUES (14, "Chromatica", "Lady Gaga", 2020, "Vinyl", 21, 39);
+INSERT INTO inventory VALUES (15, "The Fame", "Lady Gaga", 2008, "Vinyl", 11, 23);
+
+--display the database ordered by price.
+SELECT * FROM inventory ORDER BY price;
+
+--what is the sum of current inventory.
+SELECT SUM(quantity) FROM inventory;
